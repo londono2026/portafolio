@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Juan Londoño — Director Visual & Editor | Bucaramanga</title>
+  <meta name="description" content="Director visual, editor de video y fotógrafo con más de 7 años creando narrativas visuales que impactan. Basado en Bucaramanga, Colombia." />
+  <meta name="author" content="Juan Londoño" />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Juan Londoño — Director Visual & Editor" />
+  <meta property="og:description" content="Transformo ideas en experiencias visuales que emocionan, conectan y perduran." />
+  <meta property="og:type"        content="website" />
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Iconos Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ================================================
+       LOADER
+       Overlay que desaparece con animación CSS al cargar
+  ================================================ -->
+  <div id="loader" aria-hidden="true"></div>
+
+
+  <!-- ================================================
+       CURSOR PERSONALIZADO
+  ================================================ -->
+  <div class="cur cur-dot"  id="curDot"  aria-hidden="true"></div>
+  <div class="cur cur-ring" id="curRing" aria-hidden="true"></div>
+
+
+  <!-- ================================================
+       NAVEGACIÓN PRINCIPAL
+  ================================================ -->
+  <nav id="mainNav" role="navigation" aria-label="Menú principal">
+    <a href="#hero" class="nav-logo">
+      <img src="media/fotos/logo.png" alt="Juan Londoño — Logo" class="logo-img" />
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#services">Servicios</a></li>
+      <li><a href="#work">Trabajo</a></li>
+      <li><a href="#process">Proceso</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+
+    <a href="#contact" class="nav-cta">Trabajemos juntos</a>
+
+    <button class="burger" id="burger" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+
+  <!-- ================================================
+       HERO — SECCIÓN PRINCIPAL
+  ================================================ -->
+  <section class="hero" id="hero" aria-label="Presentación">
+
+    <!-- Imagen / video de fondo -->
+    <img
+      class="hero-reel"
+      src="media/fotos/fotoejemplo.jpg"
+      alt="Fondo — producción audiovisual"
+    />
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-grain"   aria-hidden="true"></div>
+
+    <!-- Contenido -->
+    <div class="hero-body">
+      <div class="hero-tag">Director Visual · Editor · Filmmaker</div>
+
+      <h1 class="hero-h1">
+        <span class="line">juan</span>
+        <span class="line">londoño</span>
+        <span class="line">parra</span>
+      </h1>
+
+      <div class="hero-row">
+        <p class="hero-desc">
+          Transformo ideas en experiencias visuales que emocionan,
+          conectan y perduran en la memoria de quien las ve.
+        </p>
+        <div class="hero-btns">
+          <a href="#work" class="btn-gold">
+            Ver mi trabajo <i class="fas fa-arrow-right"></i>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ================================================
+       ESTADÍSTICAS
+  ================================================ -->
+  <section class="stats" aria-label="Estadísticas">
+
+    <div class="stat reveal">
+      <div class="stat-n" data-target="50">0</div>
+      <span style="color:var(--red);font-family:var(--display);font-size:2rem" aria-hidden="true">+</span>
+      <div class="stat-l">Proyectos completados</div>
+    </div>
+
+    <div class="stat reveal reveal-delay-1">
+      <div class="stat-n" data-target="2">0</div>
+      <span style="color:var(--red);font-family:var(--display);font-size:2rem" aria-hidden="true">+</span>
+      <div class="stat-l">Años de experiencia</div>
+    </div>
+
+    <div class="stat reveal reveal-delay-2">
+      <div class="stat-n" data-target="300">0</div>
+      <span style="color:var(--red);font-family:var(--display);font-size:2rem" aria-hidden="true">+</span>
+      <div class="stat-l">Seguidores</div>
+    </div>
+
+    <div class="stat reveal reveal-delay-3">
+      <div class="stat-n" data-target="100">0</div>
+      <span style="color:var(--red);font-family:var(--display);font-size:2rem" aria-hidden="true">%</span>
+      <div class="stat-l">Clientes satisfechos</div>
+    </div>
+
+  </section>
+
+
+  <!-- ================================================
+       MARQUEE — SERVICIOS EN LOOP
+  ================================================ -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span>VIDEO EDITING</span><span class="dot">★</span>
+      <span>PHOTOGRAPHY</span><span class="dot">★</span>
+      <span>FILMMAKING</span><span class="dot">★</span>
+      <span>COLOR GRADING</span><span class="dot">★</span>
+      <span>MOTION GRAPHICS</span><span class="dot">★</span>
+      <span>STORYTELLING</span><span class="dot">★</span>
+      <!-- Duplicado para el loop infinito -->
+      <span>VIDEO EDITING</span><span class="dot">★</span>
+      <span>PHOTOGRAPHY</span><span class="dot">★</span>
+      <span>FILMMAKING</span><span class="dot">★</span>
+      <span>COLOR GRADING</span><span class="dot">★</span>
+      <span>MOTION GRAPHICS</span><span class="dot">★</span>
+      <span>STORYTELLING</span><span class="dot">★</span>
+    </div>
+  </div>
+
+
+  <!-- ================================================
+       SOBRE MÍ
+  ================================================ -->
+  <section class="section" id="about">
+
+    <div class="about about--no-img">
+
+      <!-- Texto -->
+      <div>
+        <div class="sec-label reveal">Sobre mí</div>
+        <h2 class="sec-title reveal">Cuento historias<br />con <em>luz y tiempo</em></h2>
+
+        <p class="about-text reveal">
+          Soy Juan David Londoño Parra, editor de video y estudiante de Artes Audiovisuales en una de las facultades de cine más prestigiosas de Bucaramanga. Con 2 años de experiencia técnica y creativa, me enfoco en dar forma a historias que conecten emocionalmente con la audiencia a través del ritmo y la narrativa visual.
+        </p>
+
+        <div class="about-text reveal" aria-hidden="true">Mi Arsenal Técnico</div>
+        <div class="about-skills reveal" aria-label="Herramientas y sofware">
+          <span class="skill-tag">DaVinci Resolve</span>
+          <span class="skill-tag">Adobe Lightroom</span>
+          <span class="skill-tag">CapCut</span>
+        </div>
+
+          <div class="about-text reveal" aria-hidden="true">Manejo de equipos</div>
+
+        <div class="about-skills reveal" aria-label="Herramientas y sofware">
+          <span class="skill-tag">Cámaras</span>
+          <span class="skill-tag">Mirrorless </span>
+          <span class="skill-tag">flujos de trabajo digitales</span>
+        </div>
+
+        <div class="about-sig reveal" aria-hidden="true">¿Tienes una visión en mente?</div>
+        <a href="#contact" class="btn-gold reveal">Hablemos de tu proyecto</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       SERVICIOS
+  ================================================ -->
+  <section class="section" id="services" style="padding-top: 0">
+
+    <div class="sec-label reveal">Servicios</div>
+    <h2 class="sec-title reveal">¿Qué puedo<br />hacer por <em>ti</em>?</h2>
+
+    <div class="services-grid reveal">
+
+      <article class="svc-card">
+        <div class="svc-num" aria-hidden="true">01</div>
+        <div class="svc-icon"><i class="fas fa-film" aria-hidden="true"></i></div>
+        <h3 class="svc-name">Edición de Video</h3>
+        <p class="svc-desc">
+          Montaje profesional con ritmo, narrativa y emoción.
+          Desde reels hasta largometrajes. Color grading cinematográfico incluido.
+        </p>
+      </article>
+
+      <article class="svc-card">
+        <div class="svc-num" aria-hidden="true">02</div>
+        <div class="svc-icon"><i class="fas fa-clapperboard" aria-hidden="true"></i></div>
+        <h3 class="svc-name">Dirección & Filmmaking</h3>
+        <p class="svc-desc">
+          Dirección completa de producciones audiovisuales. Guión, preproducción,
+          rodaje y postproducción bajo un mismo techo.
+        </p>
+      </article>
+
+      <article class="svc-card">
+        <div class="svc-num" aria-hidden="true">03</div>
+        <div class="svc-icon"><i class="fas fa-palette" aria-hidden="true"></i></div>
+        <h3 class="svc-name">Color Grading</h3>
+        <p class="svc-desc">
+          Corrección de color y look cinematográfico profesional.
+          Transformo material crudo en imágenes con identidad visual propia.
+        </p>
+      </article>
+
+      <article class="svc-card">
+        <div class="svc-num" aria-hidden="true">04</div>
+        <div class="svc-icon"><i class="fab fa-instagram" aria-hidden="true"></i></div>
+        <h3 class="svc-name">Contenido para Redes</h3>
+        <p class="svc-desc">
+          Reels, stories, TikToks y piezas optimizadas para cada plataforma.
+          Estrategia visual que convierte seguidores en clientes.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       PORTAFOLIO
+  ================================================ -->
+  <section class="section" id="work" style="padding-top: 0">
+
+    <div class="sec-label reveal">Portafolio</div>
+    <h2 class="sec-title reveal">Trabajo<br /><em>seleccionado</em></h2>
+
+
+    <!-- Grid de proyectos — Videos locales desde /videos/
+         Cada tarjeta usa el propio .mp4 como portada:
+         · preload="metadata" → muestra el primer fotograma estático
+         · En hover el JS reproduce el video en silencio (preview)
+         · Al hacer clic abre el modal con audio y controles completos
+         INSTRUCCIÓN: reemplaza "videos/proyectoN.mp4" con la ruta real -->
+    <div class="work-grid reveal">
+
+      <div class="work-item work-video" data-video="media/videos/Aguardiente.mp4" role="button" tabindex="0" aria-label="Ver Proyecto Audiovisual 1">
+        <video class="video-preview" src="media/videos/Aguardiente.mp4"
+               muted loop playsinline preload="metadata"></video>
+        <div class="video-play-btn" aria-hidden="true"><i class="fas fa-play"></i></div>
+        <div class="work-info">
+          <div class="work-cat">Video · Reel</div>
+          <div class="work-name">Aguardiente Antioqueño</div>
+        </div>
+      </div>
+
+      <div class="work-item work-video" data-video="media/videos/Canen.mp4" role="button" tabindex="0" aria-label="Ver Proyecto Audiovisual 2">
+        <video class="video-preview" src="media/videos/Canen.mp4"
+               muted loop playsinline preload="metadata"></video>
+        <div class="video-play-btn" aria-hidden="true"><i class="fas fa-play"></i></div>
+        <div class="work-info">
+          <div class="work-cat">Video · Reel</div>
+          <div class="work-name">Chefcanen</div>
+        </div>
+      </div>
+
+      <div class="work-item work-video" data-video="media/videos/Crospis.mp4" role="button" tabindex="0" aria-label="Ver Proyecto Audiovisual 3">
+        <video class="video-preview" src="media/videos/Crospis.mp4"
+               muted loop playsinline preload="metadata"></video>
+        <div class="video-play-btn" aria-hidden="true"><i class="fas fa-play"></i></div>
+        <div class="work-info">
+          <div class="work-cat">Video · Reel</div>
+          <div class="work-name">Crospis</div>
+        </div>
+      </div>
+
+      <div class="work-item work-video" data-video="media/videos/hami.mp4" role="button" tabindex="0" aria-label="Ver Proyecto Audiovisual 4">
+        <video class="video-preview" src="media/videos/hami.mp4"
+               muted loop playsinline preload="metadata"></video>
+        <div class="video-play-btn" aria-hidden="true"><i class="fas fa-play"></i></div>
+        <div class="work-info">
+          <div class="work-cat">Video · Reel</div>
+          <div class="work-name">hamilondono</div>
+        </div>
+      </div>
+
+      <div class="work-item work-video" data-video="media/videos/zonabiker1.mp4" role="button" tabindex="0" aria-label="Ver Proyecto Audiovisual 5">
+        <video class="video-preview" src="media/videos/zonabiker1.mp4"
+               muted loop playsinline preload="metadata"></video>
+        <div class="video-play-btn" aria-hidden="true"><i class="fas fa-play"></i></div>
+        <div class="work-info">
+          <div class="work-cat">Video · Reel</div>
+          <div class="work-name">ZonaBiker</div>
+        </div>
+      </div>
+
+      <div class="work-item work-video" data-video="media/videos/zonabiker2.mp4" role="button" tabindex="0" aria-label="Ver Proyecto Audiovisual 6">
+        <video class="video-preview" src="media/videos/zonabiker2.mp4"
+               muted loop playsinline preload="metadata"></video>
+        <div class="video-play-btn" aria-hidden="true"><i class="fas fa-play"></i></div>
+        <div class="work-info">
+          <div class="work-cat">Video · Reel</div>
+          <div class="work-name">ZonaBiker</div>
+        </div>
+      </div>
+
+            <div class="work-item work-video" data-video="media/videos/zonabiker3.mp4" role="button" tabindex="0" aria-label="Ver Proyecto Audiovisual 7">
+        <video class="video-preview" src="media/videos/zonabiker3.mp4"
+               muted loop playsinline preload="metadata"></video>
+        <div class="video-play-btn" aria-hidden="true"><i class="fas fa-play"></i></div>
+        <div class="work-info">
+          <div class="work-cat">Video · Reel</div>
+          <div class="work-name">ZonaBiker</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       PROCESO DE TRABAJO
+  ================================================ -->
+  <section class="section" id="process">
+
+    <div class="sec-label reveal">Cómo trabajo</div>
+    <h2 class="sec-title reveal">Un proceso<br /><em>probado</em> y claro</h2>
+
+    <div class="process-grid reveal">
+
+      <div class="process-step" data-n="01">
+        <div class="ps-n">01 — Discovery</div>
+        <h3 class="ps-title">Maquetamos tu visión </h3>
+        <p class="ps-desc">
+          Una llamada de 30 minutos para entender tu proyecto, objetivos, fechas
+          y presupuesto. Sin tecnicismos, solo una buena conversación.
+        </p>
+      </div>
+
+      <div class="process-step" data-n="02">
+        <div class="ps-n">02 — Estrategia</div>
+        <h3 class="ps-title">Planeo tu idea</h3>
+        <p class="ps-desc">
+          Elaboro una propuesta creativa con moodboard, guión técnico y
+          cronograma. Aprobamos cada detalle antes de arrancar.
+        </p>
+      </div>
+
+      <div class="process-step" data-n="03">
+        <div class="ps-n">03 — Producción</div>
+        <h3 class="ps-title">Lo hacemos realidad</h3>
+        <p class="ps-desc">
+          Rodaje, edición, colorización y motion graphics. Actualizaciones
+          constantes para que siempre sepas cómo va tu proyecto.
+        </p>
+      </div>
+
+      <div class="process-step" data-n="04">
+        <div class="ps-n">04 — Entrega</div>
+        <h3 class="ps-title">Listo para brillar</h3>
+        <p class="ps-desc">
+          Adjunto el archivo para que puedas publicarlo en la plataforma de tu preferencia y hacer uso del material audiovisual proporcionado.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  
+
+
+
+
+  <!-- ================================================
+       CLIENTES
+  ================================================ -->
+  <section class="section" style="padding-top: 0">
+
+    <div class="sec-label reveal">Clientes</div>
+    <h2 class="sec-title reveal">Empresas que han confiado<br />en <em>mi habilidad</em></h2>
+
+    <div class="clients-grid reveal" aria-label="Empresas clientes">
+      <div class="client-item"><span>ZonaBikerLaNovena</span></div>
+      <div class="client-item"><span>TaniaOrtega Floridablanca</span></div>
+      <div class="client-item"><span>Yamotos Bucaramanga</span></div>
+      <div class="client-item"><span>GIGIOMANIA</span></div>
+      <div class="client-item"><span>Casa LAGO BOUTIQUE</span></div>
+      <div class="client-item"><span>UH INGENIEIA</span></div>
+      <div class="client-item"><span>MAISOM GLAM</span></div>
+      <div class="client-item"><span>AGUARDIENTE ANTIOQUEÑO SANTANDER</span></div>
+      <div class="client-item"><span>SOLUSYSTEM</span></div>
+      <div class="client-item"><span>HAMI</span></div>
+    </div>
+
+  </section>
+
+
+  <!-- ================================================
+       TEXTO GRANDE MARQUEE
+  ================================================ -->
+  <div class="bigtext-section" aria-hidden="true">
+    <div class="bigtext">
+      <span>VISIÓN&nbsp;</span><span class="filled">QUE&nbsp;</span>
+      <span>IMPACTA&nbsp;</span><span class="filled">·&nbsp;</span>
+      <span>VISIÓN&nbsp;</span><span class="filled">QUE&nbsp;</span>
+      <span>IMPACTA&nbsp;</span><span class="filled">·&nbsp;</span>
+      <span>VISIÓN&nbsp;</span><span class="filled">QUE&nbsp;</span>
+      <span>IMPACTA&nbsp;</span><span class="filled">·&nbsp;</span>
+      <span>VISIÓN&nbsp;</span><span class="filled">QUE&nbsp;</span>
+      <span>IMPACTA&nbsp;</span><span class="filled">·&nbsp;</span>
+    </div>
+  </div>
+
+
+  <!-- ================================================
+       CONTACTO
+       El formulario usa FormSubmit.co con AJAX:
+       - data-email: destino del mensaje
+       - El JS en main.js intercepta el submit y usa fetch()
+         para no redirigir al usuario fuera de la página
+  ================================================ -->
+  <section class="section" id="contact">
+
+    <div class="contact-grid">
+
+      <!-- Info de contacto -->
+      <div>
+        <div class="sec-label reveal">Contacto</div>
+        <h2 class="sec-title reveal">
+          ¿Listo para<br />crear algo<br /><em>increíble?</em>
+        </h2>
+        <p class="about-text reveal">
+          Cuéntame tu proyecto. Respondo en menos de 24 horas.
+          Sin compromisos, solo una buena conversación sobre lo que quieres lograr.
+        </p>
+
+        <div class="cinfo reveal">
+          <a href="mailto:juandavilondonoparra@gmail.com" class="ci">
+            <div class="ci-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+            <div>
+              <div class="ci-label">Email</div>
+              <div class="ci-val">juandavilondonoparra@gmail.com</div>
+            </div>
+          </a>
+
+          <a href="https://wa.me/573123044349" class="ci" target="_blank" rel="noopener">
+            <div class="ci-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
+            <div>
+              <div class="ci-label">WhatsApp</div>
+              <div class="ci-val">+57 312 304 4349</div>
+            </div>
+          </a>
+
+          <div class="ci">
+            <div class="ci-icon"><i class="fas fa-location-dot" aria-hidden="true"></i></div>
+            <div>
+              <div class="ci-label">Ubicación</div>
+              <div class="ci-val">Bucaramanga, Colombia</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="socials reveal">
+          <a href="https://www.instagram.com/i_juancho_i/" class="soc" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/juan.londono.821145/" class="soc" target="_blank" rel="noopener" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Botones de contacto WhatsApp -->
+      <div class="reveal wsp-contact-panel">
+
+        <p class="wsp-contact-intro">
+          Elige cómo quieres comenzar. Te respondo en minutos.
+        </p>
+
+        <a
+          href="https://wa.me/573123044349?text=Hola%20Juan%2C%20quiero%20hablar%20sobre%20un%20proyecto%20audiovisual."
+          class="wsp-big-btn"
+          target="_blank"
+          rel="noopener"
+        >
+          <div class="wsp-big-icon"><i class="fab fa-whatsapp"></i></div>
+          <div class="wsp-big-text">
+            <span class="wsp-big-label">Tengo un proyecto</span>
+            <span class="wsp-big-sub">Cuéntame tu idea y arrancamos</span>
+          </div>
+          <i class="fas fa-arrow-right wsp-big-arrow"></i>
+        </a>
+
+        <a
+          href="https://wa.me/573123044349?text=Hola%20Juan%2C%20quisiera%20conocer%20tus%20precios%20y%20servicios."
+          class="wsp-big-btn"
+          target="_blank"
+          rel="noopener"
+        >
+          <div class="wsp-big-icon"><i class="fab fa-whatsapp"></i></div>
+          <div class="wsp-big-text">
+            <span class="wsp-big-label">Quiero saber precios</span>
+            <span class="wsp-big-sub">Tarifas y paquetes disponibles</span>
+          </div>
+          <i class="fas fa-arrow-right wsp-big-arrow"></i>
+        </a>
+
+        <a
+          href="https://wa.me/573123044349?text=Hola%20Juan%2C%20solo%20quiero%20hacer%20una%20consulta%20r%C3%A1pida."
+          class="wsp-big-btn"
+          target="_blank"
+          rel="noopener"
+        >
+          <div class="wsp-big-icon"><i class="fab fa-whatsapp"></i></div>
+          <div class="wsp-big-text">
+            <span class="wsp-big-label">Tengo una duda</span>
+            <span class="wsp-big-sub">Consulta rápida sin compromiso</span>
+          </div>
+          <i class="fas fa-arrow-right wsp-big-arrow"></i>
+        </a>
+
+        <p class="wsp-contact-note">
+          <i class="fas fa-clock"></i>&nbsp; Tiempo de respuesta promedio: &lt; 1 hora
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <!-- ================================================
+       BOTÓN FLOTANTE WHATSAPP
+  ================================================ -->
+  <a
+    href="https://wa.me/573123044349"
+    class="wsp-btn"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contactar por WhatsApp"
+  >
+    <i class="fab fa-whatsapp"></i>
+    <span class="wsp-tooltip" aria-hidden="true">¡Escríbeme!</span>
+  </a>
+
+
+  <!-- ================================================
+       MODAL DE VIDEO
+       Los videos se sirven desde la carpeta /videos/
+       Ejemplo de estructura:
+         videos/
+           showreel.mp4
+           proyecto1.mp4
+           proyecto2.mp4  … etc.
+  ================================================ -->
+  <div class="modal" id="vmodal" role="dialog" aria-modal="true" aria-label="Reproducir video">
+    <div class="modal-bg" id="modalBg"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar video">
+        <i class="fas fa-xmark"></i>
+      </button>
+      <!-- src vacío; se asigna dinámicamente al abrir -->
+      <video
+        id="vVideo"
+        src=""
+        controls
+        playsinline
+        preload="none"
+        title="Video — Juan Londoño"
+      ></video>
+    </div>
+  </div>
+
+
+  <!-- ================================================
+       SCRIPT PRINCIPAL
+       Cargado al final para no bloquear el renderizado
+  ================================================ -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
